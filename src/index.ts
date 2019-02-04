@@ -1,10 +1,14 @@
 //index
 import BankMember from './BankMember';
+import SavingsAccount from './SavingsAccount';
 
 const chuck = new BankMember(`Chuck`);
 
-console.log(`\nCreating ${chuck.name}'s new savings account.`);
-chuck.createSavingsAccount(3000);
+console.log(`\nCreating ${chuck.name}'s new savings account...`);
+const chucksSavingsAccount = new SavingsAccount(chuck.memberId, 3000);
+chuck.createSavingsAccount(chucksSavingsAccount);
+
+console.log(`\n${chuck.name}'s starting Balance: ${chuck.getSavingsBalance()}`);
 
 console.log("\nDepositing funds");
 chuck.depositToSavings(150);

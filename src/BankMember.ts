@@ -21,13 +21,13 @@ export default class BankMember {
         this._memberId = this.generateId();
     }
 
-    public createSavingsAccount(startingBalance: number): void{
+    public createSavingsAccount(savingsAccount: SavingsAccount): void{
         if(this._savingsAccount !== undefined){
             console.log(`${this._name} already owns a savings account.`);
             return;
         }
 
-        this._savingsAccount = new SavingsAccount(this._memberId, startingBalance);
+        this._savingsAccount = savingsAccount;
     }
 
     public depositToSavings(amount: number): void{
