@@ -11,9 +11,9 @@ export default class SavingsAccount {
         return this._balance;
     }
 
-    constructor(memberId: number, balance: number){
+    constructor(memberId: number, startingBalance: number){
         this._memberId = memberId;
-        this._balance = balance;
+        this._balance = startingBalance;
     }
 
     public deposit(amount: number): void{
